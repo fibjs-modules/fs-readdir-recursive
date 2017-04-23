@@ -1,6 +1,6 @@
 {
   "name": "@fibjs/fs-readdir-recursive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read a directory recursively.",
   "scripts": {
     "test": "fibjs test/test.js",
