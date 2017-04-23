@@ -1,10 +1,8 @@
-language: node_js
-node_js:
-- "0.10"
-- "0.12"
-- "1"
-- "2"
-- "3"
-- "4"
-script: "npm run-script test-travis"
-after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
+sudo: required
+
+services:
+  - docker
+
+script:
+- docker pull fibjs/fibjs:ci
+- dir=`pwd` ;docker run -it -v ${dir}:/home/ci  fibjs/fibjs:ci sh /home/ci-script

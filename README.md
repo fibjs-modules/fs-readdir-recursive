@@ -1,22 +1,34 @@
-# fs.readdirSyncRecursive
+# @fibjs/readdir-recursive
 
 [![NPM version][npm-image]][npm-url]
-[![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![Dependency Status][david-image]][david-url]
-[![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
-[![Gittip][gittip-image]][gittip-url]
+[![build status][travis-image]][travis-url]
+[![Test coverage][codecov-image]][codecov-url]
+[![David deps][david-image]][david-url]
+[![Known Vulnerabilities][snyk-image]][snyk-url]
+[![npm download][download-image]][download-url]
+
+[npm-image]: https://img.shields.io/npm/v/@fibjs/readdir-recursive.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@fibjs/readdir-recursive
+[travis-image]: https://img.shields.io/travis/fibjs-modules/readdir-recursive.svg?style=flat-square
+[travis-url]: https://travis-ci.org/fibjs-modules/readdir-recursive
+[codecov-image]: https://img.shields.io/codecov/c/github/fibjs-modules/readdir-recursive.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/fibjs-modules/readdir-recursive?branch=master
+[david-image]: https://img.shields.io/david/fibjs-modules/readdir-recursive.svg?style=flat-square
+[david-url]: https://david-dm.org/fibjs-modules/readdir-recursive
+[snyk-image]: https://snyk.io/test/npm/@fibjs/readdir-recursive/badge.svg?style=flat-square
+[snyk-url]: https://snyk.io/test/npm/@fibjs/readdir-recursive
+[download-image]: https://img.shields.io/npm/dm/@fibjs/readdir-recursive.svg?style=flat-square
+[download-url]: https://npmjs.org/package/@fibjs/readdir-recursive
 
 Read a directory recursively.
 
 ## Install
 
 ```bash
-npm install fs-readdir-recursive
+$ npm i @fibjs/readdir-recursive --save
 ```
 
-## Example
+## Usage
 
 ```js
 var read = require('fs-readdir-recursive')
@@ -29,33 +41,10 @@ read(__dirname) === [
 ]
 ```
 
-## API
+## Questions & Suggestions
 
-### read(root [, filter])
+Please open an issue [here](https://github.com/fibjs-modules/readdir-recursive/issues).
 
-`root` is the directory you wish to scan. `filter` is an optional filter for the files. By default, filter is:
+## License
 
-```js
-function (x) {
-  return x[0] !== '.'
-}
-```
-
-Which basically just ignores `.` files.
-
-[npm-image]: https://img.shields.io/npm/v/fs-readdir-recursive.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/fs-readdir-recursive
-[github-tag]: http://img.shields.io/github/tag/fs-utils/fs-readdir-recursive.svg?style=flat-square
-[github-url]: https://github.com/fs-utils/fs-readdir-recursive/tags
-[travis-image]: https://img.shields.io/travis/fs-utils/fs-readdir-recursive.svg?style=flat-square
-[travis-url]: https://travis-ci.org/fs-utils/fs-readdir-recursive
-[coveralls-image]: https://img.shields.io/coveralls/fs-utils/fs-readdir-recursive.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/fs-utils/fs-readdir-recursive
-[david-image]: http://img.shields.io/david/fs-utils/fs-readdir-recursive.svg?style=flat-square
-[david-url]: https://david-dm.org/fs-utils/fs-readdir-recursive
-[license-image]: http://img.shields.io/npm/l/fs-readdir-recursive.svg?style=flat-square
-[license-url]: LICENSE
-[downloads-image]: http://img.shields.io/npm/dm/fs-readdir-recursive.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/fs-readdir-recursive
-[gittip-image]: https://img.shields.io/gratipay/jonathanong.svg?style=flat-square
-[gittip-url]: https://gratipay.com/jonathanong/
+[MIT](LICENSE)

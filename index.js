@@ -1,28 +1,25 @@
-var fs = require('fs')
-var path = require('path')
-
-module.exports = read
+const fs = require('fs');
+const path = require('path');
 
 function read(root, filter, files, prefix) {
-  prefix = prefix || ''
-  files = files || []
-  filter = filter || noDotFiles
+  prefix = prefix || '';
+  files = files || [];
+  filter = filter || noDotFiles;
 
-  var dir = path.join(root, prefix)
-  if (!fs.existsSync(dir)) return files
-  if (fs.statSync(dir).isDirectory())
-    fs.readdirSync(dir)
-    .filter(filter)
-    .forEach(function (name) {
-      read(root, filter, files, path.join(prefix, name))
-    })
+  const dir = path.join(root, prefix);
+  if (!fs.exists(dir)) return files;
+  if (fs.stat(dir).isDirectory())
+    fs.readdir(dir)
+      .filter(filter)
+      .forEach(name => read(root, filter, files, path.join(prefix, name)));
   else
-    files.push(prefix)
+    files.push(prefix);
 
-  return files
+  return files;
 }
 
 function noDotFiles(x) {
-  return x[0] !== '.'
+  return x[0] !== '.';
 }
 
+module.exports = read;

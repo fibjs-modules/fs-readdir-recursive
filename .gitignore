@@ -1,7 +1,8 @@
-
 .DS_Store*
 *-link
-
-npm-debug.log
-node_modules
 coverage
+test/tmp
+node_modules
+.vscode/
+.idea/
+npm-debug.log
