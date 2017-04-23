@@ -18,13 +18,14 @@ describe('fs.readdirRecursive()', () => {
       return name[0] !== '.' && name !== 'node_modules' && name !== 'coverage';
     });
 
-    assert(files.length === 5);
+    assert(files.length === 6);
     assert.deepEqual(files.sort(), [
       'test/test.js',
       'index.js',
       'LICENSE',
       'package.json',
       'README.md',
+      'History.md',
     ].sort());
   })
 
