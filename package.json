@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fibjs-modules/readdir-recursive.git"
+    "url": "git+https://github.com/fibjs-modules/fs-readdir-recursive.git"
   },
   "keywords": [
     "fs",
@@ -19,9 +19,9 @@
   "author": "ngot",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fibjs-modules/readdir-recursive/issues"
+    "url": "https://github.com/fibjs-modules/fs-readdir-recursive/issues"
   },
-  "homepage": "https://github.com/fibjs-modules/readdir-recursive#readme",
+  "homepage": "https://github.com/fibjs-modules/fs-readdir-recursive#readme",
   "ci": {
     "type": "travis"
   },
