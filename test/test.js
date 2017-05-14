@@ -1,6 +1,7 @@
 const test = require('test');
 const fs = require('fs');
 const path = require('path');
+const sep = path.sep;
 
 test.setup();
 
@@ -18,13 +19,14 @@ describe('fs.readdirRecursive()', () => {
       return name[0] !== '.' && name !== 'node_modules' && name !== 'coverage';
     });
 
-    assert(files.length === 6);
+    assert.equal(files.length, 7);
     assert.deepEqual(files.sort(), [
-      'test/test.js',
+      `test${sep}test.js`,
       'index.js',
       'LICENSE',
       'package.json',
       'README.md',
+      'appveyor.yml',
       'History.md',
     ].sort());
   })
@@ -72,10 +74,11 @@ describe('fs.readdirRecursive()', () => {
 
       assert(files.length === 5);
       assert.deepEqual(files.sort(), [
-        'test/test.js',
+        `test${sep}test.js`,
         'index.js',
         'LICENSE',
         'package.json',
+        'appveyor.yml',
         'README.md'
       ].sort());
     } catch (err) {
